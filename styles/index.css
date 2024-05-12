@@ -55,15 +55,15 @@ header {
 }
 
 .baner {
-    width: 100%;
+    width: 80%;
     height: 60%;
 
 }
 
 .img-baner {
-    width: 100%;
+    width: 80%;
     height: 60%;
-    object-fit: fill;
+    
 }
 
 main {
@@ -91,22 +91,30 @@ main {
     width: 30%;
     height: 20%;
 }
-
-.contenedor-img2 img {
-    width: 200;
-    height: 30%;
-
-}
-
 .experiencia {
     width: 80%;
+    object-fit: fill;
+    font-family: var(--tipografia);
+    color: var(--colorTexto);
 }
 
 .img-exp {
-    width: 100%;
+    width: 80%;
     height: 60%;
-    object-fit: fill;
+    
 }
+.contenedor-img{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10;
+}
+
+.contenedor-img img{
+    width: 20%;
+    height: 20%;
+}
+
+
 
 .logros {
     width: 80%;
@@ -116,7 +124,7 @@ main {
 }
 
 .img-logros {
-    width: 100%;
+    width: 80%;
     height: 60%;
 
 }
