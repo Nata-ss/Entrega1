@@ -1,0 +1,264 @@
+@import url('https://fonts.cdnfonts.com/css/quileute');
+@import url('https://fonts.cdnfonts.com/css/kelmscott-roman-nf');
+
+:root {
+    --colorFondo: #00989b;
+    --colorEnfasis1: #dcdedd;
+    --colorEnfasis2: #99a2a1;
+    --colorEnfasis3: #00585a;
+    --colorText: #afafb8;
+    --colorText2: #00181a;
+
+    /* Fuentes */
+    --textTitle: 'Quileute', sans-serif;
+    --textContent: 'Kelmscott Roman NF', sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--colorEnfasis1);
+    width: 100vw;
+    height: auto;
+    /* Overflow -> me sirve para definir qué pasa con el contenido que sobresale de mi contenedor */
+    overflow-x:hidden;
+}
+
+/* ----------------HEADER--------------- */
+header {
+    width: 100%;
+    height: auto;
+   
+}
+
+.menuNavegacion {
+
+    width: 100%;
+    height: 100px;
+    background-color: var(--colorEnfasis3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-left: 50px;
+    padding-right: 50px;
+    z-index: 100;
+  
+}
+
+.logo {
+    height: 70%;
+}
+
+.img-logo {
+    height: 120%;
+
+}
+
+.listaMenu {
+    display: flex;
+    gap: 200px;
+    list-style: none;
+}
+
+.listaMenu a {
+    text-decoration: none;
+    color: var(--colorText);
+    font-family: var(--textContent);
+    font-size: 20px;
+}
+
+.listaMenu a:hover {
+    color: var(--colorEnfasis1);
+}
+/* ----------------MAIN--------------- */
+.baner{
+    width: 100%;
+    height: 80%;
+    
+}
+.baner img{
+   
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    margin-top: 120px;
+    
+}
+.imagenPrincipal{
+    border-radius: 3%;
+        border: solid 5px var(--colorFondo);
+        width: 90%;
+        height: auto;
+        
+        margin-top: 5%;
+        margin-left: 5%;
+        
+      }
+      .imgParrafo{
+        
+        display: flex;
+        gap: 70px;
+       
+      }
+
+
+      .imgParrafo p{
+        margin-top: 2%;
+        width: 50%;
+       margin:auto;
+        justify-content:end;
+        color: var(--colorEnfasis3);
+        font-family: var(--textContent);
+        font-size: 20px;
+    }
+
+.titulo{
+    height: 60px;
+    width: 100%;
+    background-color: var(--colorEnfasis);
+    border-radius: 3%;
+    place-content: center;
+    color: var(--colorFondo);
+    transition: all 500ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+    margin-top: 5%;
+    
+}
+.titulo:active{
+    background-color: rgb(16, 120, 120);
+    color: rgb(131, 135, 156);
+    transform: scale(1,2);
+    margin-bottom: 10px;
+   
+    
+}
+.titulo2{
+    height: 60px;
+    width: 100%;
+    background-color: var(--colorEnfasis);
+    border-radius: 3%;
+    place-content: center;
+    color: var(--colorFondo);
+    transition: all 500ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+    margin-top: 5%;
+    
+}
+.titulo2:active{
+    background-color: rgb(16, 120, 120);
+    color: rgb(131, 135, 156);
+    transform: scale(1,2);
+    margin-bottom: 10px;
+   
+    
+}
+
+.carrusel{
+    color: var(--colorFondo);
+    width: 50%;
+    height: 60%;
+    margin-top: 4%;
+    margin-left: 30%;
+}
+
+
+.contenedor-Habilidades{
+    border: solid 5px var(--colorEnfasis);
+    width: 75%;
+    height: 65vh;
+    margin:100px auto;
+    overflow-x: hidden ;
+    
+}
+.habilidades{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /*nombre que se conecta con el keyframe*/
+    animation-name: deslizar;
+    /*tiempo de duracion*/
+    animation-duration: 5s;
+     /*cuanta veces quiero que se repita*/
+     animation-iteration-count: infinite;
+     /*forma que se ve el cambio*/
+     animation-timing-function: ease-in-out;
+     animation-direction: alternate;
+}
+   /*vamos a poner a funcionar la animacion*/
+   /*inicio 0% mitad 50% final 100%
+   from -> to */
+   @keyframes deslizar {
+    from{
+        transform: translateX(0%);
+    }
+    50%{
+            transform: translateX(-150%);
+    }
+    to{
+        transform: translateX(-300%);
+    }
+    
+   }
+  
+.contenedor-Habilidades img{
+    width: 100%;
+    height: 100%;
+  
+}
+/* ----------------FOOTER--------------- */
+.footer {
+    background-color: var(--colorEnfasis3);
+    width: 100%;
+    height: 100px;
+
+}
+
+.contacto {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    color: var(--colorText);    
+    font-family: var(--textContent);
+    font-size: 20px;
+}
+
+
+@media screen and (max-width:1024PX){
+    /* body{
+        background-color: blue;
+    } */
+    .titulo{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .imgParrafo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgParrafo img{
+        width: 100%;
+    }
+    
+    .imgParrafo p{
+        width: 100%;
+    }
+    
+}

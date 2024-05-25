@@ -1,0 +1,262 @@
+@import url('https://fonts.cdnfonts.com/css/kaisei-opti');
+@import url('https://fonts.cdnfonts.com/css/jsmath-cmsy10');
+@import url('https://fonts.cdnfonts.com/css/ysabeau-sc');
+
+:root {
+    --tipografia: 'Kaisei Opti', sans-serif;
+    --tipografia2: 'jsMath-cmsy10', sans-serif;
+    --tipografia3: 'Ysabeau SC', sans-serif;
+    --colorFondo: #F8E1E1;
+    --colorTexto: #6A1577;
+    --colorTextoNav: #FFFFFF;
+    --ColorBaners: #A98E8E;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    width: 100%;
+    background-color: var(--colorFondo);
+    font-family: var(--tipografia);
+    color: var(--colorTexto);
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+
+}
+
+.menuNav {
+    background-color: var(--ColorBaners);
+    width: 100%;
+    height: -30%;
+}
+
+.menu {
+    height: -30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    color: var(--colorTextoNav);
+    font-family: var(--tipografia3);
+
+}
+
+.logo {
+    width: 80px;
+    height: 70px;
+    display: flex;
+
+}
+
+
+main {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -80%;
+}
+
+.baner {
+
+    width: -600%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 100%;
+
+
+}
+
+.contenedorPrincipal {
+
+    width: 75%;
+    height: 65vh;
+}
+
+.contenedorImagenes {
+
+    
+    margin-top: 3%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.contenedorImagenes.img {
+    width: 8px;
+    height: 7px;
+    padding: 100px;
+}
+
+
+
+.experiencia {
+    margin-top: 10%;
+    width: 80%;
+    object-fit: fill;
+    font-family: var(--tipografia);
+    color: var(--colorTexto);
+}
+
+.img-exp {
+    width: 80%;
+    height: 60%;
+
+}
+
+
+.baner{
+    width: -600%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 100%;
+}
+.baner.img-baner{
+    width: -1000;
+    height: 30%;
+}
+.baner1{
+    width: -600%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 100%;
+}
+.baner.img-baner1{
+    width: -600%;
+    height: 30%;
+    border:solid rgb(226, 43, 104);
+    margin-top: 100%;
+}
+
+.carrusel{
+    border:solid blueviolet;
+    width: 80%;
+    height: 60%;
+    margin-top: 5%;
+   
+}
+.baner2{
+    width: -600%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5%;
+}
+.baner.img-baner2{
+    width: -600%;
+    height: 30%;
+    margin-top: 10;
+}
+
+.contenedorImagenes2 {
+
+   
+    margin-top: 3%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+   
+        /* nombre que se conecta con el keyframe */
+        animation-name: deslizar;
+         /*tiempo de duración  */
+        animation-duration: 10s;
+        /* cuantas veces queremos que se repita la animación */
+        animation-iteration-count: infinite;
+        /* forma en que queremos que se de el movimiento */
+        animation-timing-function: ease-in-out;
+        /* dirección de mi animación */
+        animation-direction: alternate;
+    }
+    @keyframes deslizar {
+        from{
+            transform: translateX(0%);
+            /* transform: scale(0.5); */
+        }
+        50%{
+            transform: translateX(-150%);
+            
+        }
+        to{
+            transform: translateX(-300%);
+            /* transform: scale(1.2); */
+        }
+    }
+
+
+
+.contenedorImagenes.img2 {
+    border: solid 5px blue;
+    width: 8px;
+    height: 7px;
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr ;
+    gap: 10;
+}
+
+.contenedor-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr ;
+    gap: 10;
+}
+
+.contenedor-img img {
+    width: 20%;
+    height: 20%;
+}
+
+footer {
+    /* dimensiones */
+    width: 100vw;
+    height: -30%;
+
+    /* aspectos generales */
+    background-color: var(--ColorBaners);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    color: var(--colorTextoNav);
+    font-family: var(--tipografia1)
+}
+
+.logo-2 {
+    width: 100px;
+    height: -30%;
+}
+
+/* Los íconos en css y html, se toman como si fueran texto */
+.redesSociales {
+    text-align: center;
+    height: -30%;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+i {
+    margin: 15px;
+    color: var(--colorTextoNav);
+    font-family: var(--tipografia3);
+}
