@@ -9,7 +9,7 @@
     --colorText: #afafb8;
     --colorText2: #00181a;
 
-    /* Fuentes */
+    /* mis Fuentes */
     --textTitle: 'Quileute', sans-serif;
     --textContent: 'Kelmscott Roman NF', sans-serif;
 }
@@ -25,30 +25,25 @@ body{
     background-color: var(--colorEnfasis1);
     width: 100vw;
     height: auto;
-    /* Overflow -> me sirve para definir qué pasa con el contenido que sobresale de mi contenedor */
     overflow-x:hidden;
 }
 
 /* ----------------HEADER--------------- */
 header {
     width: 100%;
-    height: auto;
+    height: 100vh;
    
 }
 
 .menuNavegacion {
 
     width: 100%;
-    height: 100px;
+    height: 30vh;
     background-color: var(--colorEnfasis3);
-    position: fixed;
-    top: 0;
-    left: 0;
+    position:relative;   
     display:flex;
-    justify-content: space-between;
+    justify-content: space-between 10px;
     align-items:center;
-    padding-left: 50px;
-    padding-right: 50px;
     z-index: 100;
   
 }
@@ -64,7 +59,7 @@ header {
 
 .listaMenu {
     display: flex;
-    gap: 200px;
+    gap: 100px;
     list-style: none;
 }
 
@@ -72,33 +67,36 @@ header {
     text-decoration: none;
     color: var(--colorText);
     font-family: var(--textContent);
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .listaMenu a:hover {
     color: var(--colorEnfasis1);
 }
 /* ----------------MAIN--------------- */
+main{
+    display:contents;
+    justify-content: center;
+}
 .baner{
     width: 100%;
-    height: 80%;
+    height: 40vh;
     
 }
 .baner img{
    
     width: 100%;
-    height: 100%;
+    height: 40vh;
     object-fit: fill;
-    margin-top: 120px;
+    margin-top: -500px;
     
 }
 .imagenPrincipal{
     border-radius: 3%;
         border: solid 5px var(--colorFondo);
         width: 90%;
-        height: auto;
-        
-        margin-top: 5%;
+        height: auto;        
+        margin-top: -20%;
         margin-left: 5%;
         
       }
@@ -164,7 +162,7 @@ header {
    
     
 }
-
+/*aplico diseño al carrusel*/
 .carrusel{
     color: var(--colorFondo);
     width: 50%;
@@ -187,19 +185,15 @@ header {
     width: 100%;
     height: 100%;
     display: flex;
-    /*nombre que se conecta con el keyframe*/
+    gap: 100px;
+    /*animacion elegida*/
     animation-name: deslizar;
-    /*tiempo de duracion*/
     animation-duration: 5s;
-     /*cuanta veces quiero que se repita*/
      animation-iteration-count: infinite;
-     /*forma que se ve el cambio*/
      animation-timing-function: ease-in-out;
      animation-direction: alternate;
 }
-   /*vamos a poner a funcionar la animacion*/
-   /*inicio 0% mitad 50% final 100%
-   from -> to */
+   
    @keyframes deslizar {
     from{
         transform: translateX(0%);
@@ -238,27 +232,87 @@ header {
     font-size: 20px;
 }
 
-
-@media screen and (max-width:1024PX){
-    /* body{
-        background-color: blue;
-    } */
-    .titulo{
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .imgParrafo{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .imgParrafo img{
-        width: 100%;
-    }
+ 
+/* media query para hacer el diseño responsive*/
+@media screen and (max-width:490px){
     
-    .imgParrafo p{
+    main{
         width: 100%;
+        height: -80%;
+    } 
+
+    .menuNavegacion{
+       width: 100000px;
+       
     }
+
+    .listaMenu{
+        gap: -50px;
+        font-size: 10%;
+    }
+    .img-logo{
+        size: 20%;
+    }
+    .baner{
+      
+        margin-top: -10%;
+        width: 1500px;
+        height: 30vh;
+       
+        
+    }
+    .baner img{
+        width: 1600px;
+    }
+    .imagenPrincipal{
+        width: 1400px;
+        height: 10%;
+        margin-left: 150px;  
+          
+    }
+    .imgParrafo{
+        
+        width: 150%;
+        height: 50vh;   
+    }
+      .titulo{
+        width: 500%;
+        display: flex;
+        margin-left: 150px;     
+        justify-content: center;
+      }
+
+      .carrusel{
+        width: 500%;
+        height: 300px;
+        display: flex;
+        margin-left: 150px;     
+        justify-content: center;
+      }
+      .titulo2{
+        width: 500%;
+        display: flex;
+        margin-left: 150px;     
+        justify-content: center;
+    }
+    .contenedor-Habilidades{
+        width: 500%;
+        display: flex;
+        margin-left: 150px;     
+        justify-content: center;
+    }
+    .footer{
+        width: 1600px;
+       
+ 
+    }
+    .contacto{
+        width: 50%;
+        margin-left: 150px;      
+        margin-bottom: 100PX;
+    }
+   
+    
+    
     
 }
